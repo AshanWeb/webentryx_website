@@ -1,0 +1,92 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&display=swap');
+
+
+
+
+@theme inline {
+     --breakpoint-1440xl: 90rem;
+     --breakpoint-2xl-1512: 94rem;
+}
+
+.navlink-fonts {
+    @apply text-[16px];
+    @apply font-semibold;
+    /* @apply text-[#1A1B1E]; */
+    /* @apply hover:text-[#00c3ff]; */
+}
+
+.footer-title {
+    @apply text-xl;
+    @apply font-semibold;
+    @apply text-[#ffffff];
+}
+
+.footer-link {
+    @apply text-[16px];
+    @apply font-normal;
+    @apply text-[#ffffff];
+}
+
+.footer-link li {
+    @apply cursor-pointer;
+    @apply hover:underline;
+    @apply mb-2
+}
+
+.footer-social {
+   @apply w-7; 
+   @apply h-7 flex; 
+   @apply items-center; 
+   @apply justify-center; 
+   @apply rounded-full; 
+   @apply bg-white; 
+   @apply text-blue-600; 
+   @apply hover:transform; 
+   @apply hover:-translate-y-2; 
+   @apply transition-transform; 
+   @apply cursor-pointer; 
+   @apply shadow-md;
+   @apply duration-500;
+}
+
+.res-con {
+  width: 100%;
+  max-width: 118.75rem !important;
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.bubble {
+  position: absolute;
+  bottom: -10px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%; /* perfect circle */
+  filter: blur(1px);
+  animation: float linear infinite;
+  /* box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); */
+}
+
+
+
+@media only screen and (max-width: 1280spx) {
+  .res-con {
+    width: calc(100% - 100px);
+  }
+}
+    
