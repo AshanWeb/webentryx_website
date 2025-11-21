@@ -10,21 +10,21 @@ import SeoScore from "../components/home/SeoScore";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Wentry | Innovative Solutions for Modern Businesses",
+  title: "Webentryx | Innovative Digital Solutions for Modern Businesses",
   description:
-    "Wentry provides cutting-edge digital solutions that help your business grow and thrive in the modern world.",
+    "Webentryx delivers innovative digital solutions to enhance performance, increase visibility & drive sustainable business growth across all digital channels.",
   openGraph: {
-    title: "Wentry | Innovative Solutions for Modern Businesses",
+    title: "Webentryx | Innovative Digital Solutions for Modern Businesses",
     description:
-      "Explore Wentry’s innovative digital solutions designed to help your business thrive.",
-    url: "https://www.wentry.com",
-    siteName: "Wentry",
+      "Webentryx delivers innovative digital solutions to enhance performance, increase visibility & drive sustainable business growth across all digital channels.",
+    url: "https://www.webentryx.com",
+    siteName: "Webentryx",
     images: [
       {
         url: "/images/hero_banner_wentry.webp",
         width: 1200,
         height: 630,
-        alt: "Wentry homepage preview",
+        alt: "Webentryx homepage preview",
       },
     ],
     locale: "en_US",
