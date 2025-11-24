@@ -1,4 +1,4 @@
-import { getBlogPosts, getBlogPost } from "@/lib/contentful";
+import { getBlogPosts, getBlogPost, BlogPost } from "@/lib/contentful";
 import { notFound } from "next/navigation";
 import RichTextRender from "@/app/components/reusable/RichTextRender";
 import Image from "next/image";
@@ -9,30 +9,23 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.fields.slug }));
 }
 
+// Define a type for params
+type BlogPageParams = { slug: string };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string }; 
-}): Promise<Metadata> {
-  const post = await getBlogPost(params.slug);
+// Metadata using only titleTag
+export async function generateMetadata({ params }: { params: BlogPageParams }): Promise<Metadata> {
+  const post: BlogPost | undefined = await getBlogPost(params.slug);
 
   if (!post || !post.fields.titleTag) {
     return { title: "Webentryx Blog | Insights on Digital Marketing & Analytics" };
   }
 
-  return {
-    title: post.fields.titleTag, 
-  };
+  return { title: post.fields.titleTag };
 }
 
-
-export default async function BlogPostPage({
-  params,
-}: {
-  params: { slug: string }; 
-}) {
-  const post = await getBlogPost(params.slug);
+// Page component
+export default async function BlogPostPage({ params }: { params: BlogPageParams }) {
+  const post: BlogPost | undefined = await getBlogPost(params.slug);
 
   if (!post) return notFound();
 
