@@ -4,27 +4,48 @@ import RichTextRender from "@/app/components/reusable/RichTextRender";
 import Image from "next/image";
 import type { Metadata } from "next";
 
+/**
+ * Generate static params for SSG
+ */
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
   return posts.map((post) => ({ slug: post.fields.slug }));
 }
 
-// Define a type for params
-type BlogPageParams = { slug: string };
-
-// Metadata using only titleTag
-export async function generateMetadata({ params }: { params: BlogPageParams }): Promise<Metadata> {
+/**
+ * Generate metadata dynamically per blog post
+ */
+export async function generateMetadata({ params }): Promise<Metadata> {
   const post: BlogPost | undefined = await getBlogPost(params.slug);
 
   if (!post || !post.fields.titleTag) {
     return { title: "Webentryx Blog | Insights on Digital Marketing & Analytics" };
   }
 
-  return { title: post.fields.titleTag };
+  return {
+    title: post.fields.titleTag,
+    openGraph: {
+      title: post.fields.titleTag,
+      description: post.fields.description || "",
+      images: post.fields.image
+        ? [
+            {
+              url: `https:${post.fields.image.fields.file.url}`,
+              width: 1200,
+              height: 630,
+              alt: post.fields.title,
+            },
+          ]
+        : [],
+    },
+  };
 }
 
-// Page component
-export default async function BlogPostPage({ params }: { params: BlogPageParams }) {
+/**
+ * Blog post page
+ * DO NOT manually type `params` to avoid App Router PageProps errors
+ */
+export default async function BlogPostPage({ params }) {
   const post: BlogPost | undefined = await getBlogPost(params.slug);
 
   if (!post) return notFound();
