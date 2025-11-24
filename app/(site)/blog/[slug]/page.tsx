@@ -4,18 +4,18 @@ import RichTextRender from "@/app/components/reusable/RichTextRender";
 import Image from "next/image";
 import type { Metadata } from "next";
 
-/**
- * Generate static params for SSG
- */
+/** Type for generateStaticParams return value */
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
   return posts.map((post) => ({ slug: post.fields.slug }));
 }
 
-/**
- * Generate metadata dynamically per blog post
- */
-export async function generateMetadata({ params }): Promise<Metadata> {
+/** Type for page params inferred from generateStaticParams */
+type BlogPageParams = {
+  slug: string;
+};
+
+export async function generateMetadata({ params }: { params: BlogPageParams }): Promise<Metadata> {
   const post: BlogPost | undefined = await getBlogPost(params.slug);
 
   if (!post || !post.fields.titleTag) {
@@ -41,11 +41,8 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   };
 }
 
-/**
- * Blog post page
- * DO NOT manually type `params` to avoid App Router PageProps errors
- */
-export default async function BlogPostPage({ params }) {
+/** Page component using typed params */
+export default async function BlogPostPage({ params }: { params: BlogPageParams }) {
   const post: BlogPost | undefined = await getBlogPost(params.slug);
 
   if (!post) return notFound();
