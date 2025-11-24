@@ -182,7 +182,9 @@ function ContactMain() {
               <div>
                 <Turnstile
                   siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
-                  onSuccess={(token) => setValue("turnstileToken", token)}
+                  onSuccess={(token: string) =>
+                    setValue("turnstileToken", token)
+                  }
                 />
               </div>
 
