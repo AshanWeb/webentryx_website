@@ -2,6 +2,10 @@ import { getBlogPosts } from "@/lib/contentful";
 import BlogGridWithSearch from "@/app/components/blog/BlogGridWithSearch";
 import BlogHero from "@/app/components/reusable/BlogHero";
 
+export const metadata = {
+  title: "Webentryx Blog | Insights on Digital Marketing & Analytics",
+};
+
 export default async function BlogPage() {
   const posts = await getBlogPosts();
 
