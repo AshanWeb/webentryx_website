@@ -19,7 +19,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const post = await getBlogPost(params.slug);
 
-  if (!post || !post.fields.titleTag) return { title: "Webentryx Blog | Insights on Digital Marketing & Analytics" };
+  if (!post || !post.fields.titleTag)
+    return { title: "Webentryx Blog | Insights on Digital Marketing & Analytics" };
 
   return {
     title: post.fields.titleTag, 
@@ -29,7 +30,7 @@ export async function generateMetadata({
 export default async function BlogPostPage({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: string }; 
 }) {
   const post = await getBlogPost(params.slug);
 
