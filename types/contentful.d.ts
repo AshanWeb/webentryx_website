@@ -57,7 +57,7 @@ declare namespace Contentful {
     date: string;
     comments: string;
     content: Document; // Use Contentful's Document type
-
+    titleTag: string;
   }
 
   /**

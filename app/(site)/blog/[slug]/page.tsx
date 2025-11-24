@@ -2,6 +2,7 @@ import { getBlogPosts, getBlogPost } from "@/lib/contentful";
 import { notFound } from "next/navigation";
 import RichTextRender from "@/app/components/reusable/RichTextRender";
 import Image from "next/image";
+import type { Metadata } from "next"; 
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
@@ -15,15 +16,16 @@ export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
-}) {
+}): Promise<Metadata> { 
   const post = await getBlogPost(params.slug);
 
-  if (!post) return { title: "Webentryx Blog | Insights on Digital Marketing & Analytics" }; // fallback
+  if (!post || !post.fields.titleTag) return { title: "Blog Post | Webentryx" };
 
   return {
-    title: post.fields.title,
+    title: post.fields.titleTag,
   };
 }
+
 export default async function BlogPostPage({
   params,
 }: {

@@ -26,6 +26,7 @@ export interface BlogPost {
         date: string;
         comments: string;
         content: Document; 
+        titleTag: string;
     };
 }
 
