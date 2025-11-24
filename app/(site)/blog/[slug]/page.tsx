@@ -15,8 +15,13 @@ type BlogPageParams = {
   slug: string;
 };
 
-export async function generateMetadata({ params }: { params: BlogPageParams }): Promise<Metadata> {
-  const post: BlogPost | undefined = await getBlogPost(params.slug);
+type BlogPageProps = {
+  params: Promise<BlogPageParams>;
+};
+
+export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post: BlogPost | undefined = await getBlogPost(slug);
 
   if (!post || !post.fields.titleTag) {
     return { title: "Webentryx Blog | Insights on Digital Marketing & Analytics" };
@@ -42,8 +47,9 @@ export async function generateMetadata({ params }: { params: BlogPageParams }): 
 }
 
 /** Page component using typed params */
-export default async function BlogPostPage({ params }: { params: BlogPageParams }) {
-  const post: BlogPost | undefined = await getBlogPost(params.slug);
+export default async function BlogPostPage({ params }: BlogPageProps) {
+  const { slug } = await params;
+  const post: BlogPost | undefined = await getBlogPost(slug);
 
   if (!post) return notFound();
 
