@@ -6,11 +6,13 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import toast from "react-hot-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  message: z.string().optional(),
+  turnstileToken: z.string().min(1, "Captcha failed"),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -23,6 +25,7 @@ function ContactMain() {
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
@@ -33,7 +36,7 @@ function ContactMain() {
 
     try {
       const res = await fetch(
-        "https://example-contact-form.example.workers.dev", // ← your worker URL
+        "https://webentryx-worker-contact.ashanjw.workers.dev",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -142,7 +145,9 @@ function ContactMain() {
                   className="w-full rounded-full p-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 {errors.name && (
-                  <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.name.message}
+                  </p>
                 )}
               </div>
 
@@ -154,7 +159,9 @@ function ContactMain() {
                   className="w-full rounded-full p-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 {errors.email && (
-                  <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.email.message}
+                  </p>
                 )}
               </div>
 
@@ -166,8 +173,17 @@ function ContactMain() {
                   className="w-full rounded-2xl p-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 ></textarea>
                 {errors.message && (
-                  <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.message.message}
+                  </p>
                 )}
+              </div>
+
+              <div>
+                <Turnstile
+                  siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                  onSuccess={(token) => setValue("turnstileToken", token)}
+                />
               </div>
 
               <button

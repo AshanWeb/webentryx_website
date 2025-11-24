@@ -3,6 +3,7 @@ import { Red_Hat_Display, Red_Hat_Text } from "next/font/google";
 import "../globals.css";
 import Footer from "../components/layout/Footer";
 import InnerHeader from "../components/reusable/InnerHeader";
+import { Toaster } from "react-hot-toast";
 
 const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <InnerHeader />
         {children}
+        <Toaster position="top-right" />
         <Footer />
       </body>
     </html>
