@@ -11,6 +11,19 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const post = await getBlogPost(params.slug);
+
+  if (!post) return { title: "Webentryx Blog | Insights on Digital Marketing & Analytics" }; // fallback
+
+  return {
+    title: post.fields.title,
+  };
+}
 export default async function BlogPostPage({
   params,
 }: {

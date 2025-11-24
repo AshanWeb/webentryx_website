@@ -1,6 +1,6 @@
-import { getBlogPosts } from '@/lib/contentful';
-import BlogGridWithSearch from '@/app/components/blog/BlogGridWithSearch';
-import BlogHero from '@/app/components/reusable/BlogHero';
+import { getBlogPosts } from "@/lib/contentful";
+import BlogGridWithSearch from "@/app/components/blog/BlogGridWithSearch";
+import BlogHero from "@/app/components/reusable/BlogHero";
 
 export default async function BlogPage() {
   const posts = await getBlogPosts();

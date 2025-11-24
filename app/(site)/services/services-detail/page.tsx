@@ -5,6 +5,10 @@ import BlogHero from "@/app/components/reusable/BlogHero";
 import ServicesSec from "@/app/components/services-detail/ServicesBanner";
 import React from "react";
 
+export const metadata = {
+  title: "Webentryx Services | Digital Solutions for Business Growth",
+};
+
 function page() {
   return (
     <div>

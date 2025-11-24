@@ -5,10 +5,16 @@ import BlogHero from "@/app/components/reusable/BlogHero";
 
 import React from "react";
 
+export const metadata = {
+  title: "Digital Marketing Services | SEO & Growth Strategies | Webentryx",
+};
 function page() {
   return (
     <div>
-      <BlogHero title="Digital Marketing Consulting" backgroundImage="/images/blog_header.webp" />
+      <BlogHero
+        title="Digital Marketing Consulting"
+        backgroundImage="/images/blog_header.webp"
+      />
       <DigitalServices />
       <div className="max-w-7xl mx-auto">
         <LogoSlider />

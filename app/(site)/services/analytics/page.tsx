@@ -5,6 +5,10 @@ import BlogHero from "@/app/components/reusable/BlogHero";
 
 import React from "react";
 
+export const metadata = {
+  title: "Analytics Services by Webentryx | Data Insights & Tracking",
+};
+
 function page() {
   return (
     <div>
