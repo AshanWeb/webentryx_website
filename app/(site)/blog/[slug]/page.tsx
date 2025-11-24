@@ -15,15 +15,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Promise<Metadata> { 
+  params: { slug: string }; 
+}): Promise<Metadata> {
   const post = await getBlogPost(params.slug);
 
   if (!post || !post.fields.titleTag) return { title: "Blog Post | Webentryx" };
 
-  return {
-    title: post.fields.titleTag,
-  };
+  return { title: post.fields.titleTag }; 
 }
 
 export default async function BlogPostPage({
