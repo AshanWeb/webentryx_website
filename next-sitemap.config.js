@@ -1,9 +1,10 @@
 /** @type {import('next-sitemap').IConfig} */
+
 module.exports = {
-  siteUrl: 'https://www.webentryx.com', 
+  siteUrl: 'https://www.webentryx.com',
   generateRobotsTxt: true,
-  sitemapSize: 5000,
+  sitemapSize: 50000,
   changefreq: 'weekly',
   priority: 0.7,
-  exclude: ['/admin/*', '/secret'], 
+  exclude: ['/admin/*', '/secret'],  
 };

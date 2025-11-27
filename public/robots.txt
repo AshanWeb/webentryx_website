@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.webentryx.com
+
+# Sitemaps
+Sitemap: https://www.webentryx.com/sitemap.xml
