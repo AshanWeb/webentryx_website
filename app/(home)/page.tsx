@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Webentryx",
     images: [
       {
-        url: "/images/hero_banner_wentry.webp",
+        url: "https://www.webentryx.com/webentryx_main.jpg",
         width: 1200,
         height: 630,
         alt: "Webentryx homepage preview",
