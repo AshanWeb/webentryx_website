@@ -14,11 +14,11 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-9 xl:px-11 2xl:px-0 pt-48 pb-28 md:pt-56 md:pb-0">
         <div className="space-y-5 max-w-3xl">
-          <h2 className="text-4xl lg:text-4xl xl:text-[50px]  text-white font-extrabold leading-tight">
+          <h1 className="text-4xl lg:text-4xl xl:text-[50px]  text-white font-extrabold leading-tight">
             Data-Driven <br className="hidden md:block" />
             Digital Marketing <br className="hidden md:block" />
             in the Age of AI
-          </h2>
+          </h1>
 
           <div className="flex items-center gap-6 mt-12">
             <MainButton text="Book a Consultation" href="/contact" />

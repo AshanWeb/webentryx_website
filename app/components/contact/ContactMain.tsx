@@ -132,9 +132,9 @@ function ContactMain() {
               <div className="w-2 h-2 bg-[#a5b7d2] rounded-full" />
             </div>
 
-            <h2 className="text-[28px] md:text-4xl font-bold text-gray-900 mb-8">
+            <h1 className="text-[28px] md:text-4xl font-bold text-gray-900 mb-8">
               Ready to Get Started?
-            </h2>
+            </h1>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
               <div>

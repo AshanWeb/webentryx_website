@@ -67,9 +67,9 @@ function ServiceList() {
           </span>
           <div className="w-2 h-2 bg-[#a5b7d2] rounded-full" />
         </div>
-        <h2 className="text-4xl lg:text-3xl xl:text-4xl font-bold text-[#1a1b1e] mb-3 md:mb-4">
+        <h1 className="text-4xl lg:text-3xl xl:text-4xl font-bold text-[#1a1b1e] mb-3 md:mb-4">
           Turning Digital Investment into Measurable Growth
-        </h2>
+        </h1>
         <p className="text-[16px] text-[#606060] md:max-w-3/4 mx-auto md:mx-0 mb-6 text-justify md:text-center">
           {`At Webentryx, we deliver revenue-driven digital marketing that blends creativity with data. Our core expertise lies in hospitality and travel, helping resorts, hotels, and travel agents stand out in competitive markets.
                     We’ve also partnered with brands across diverse industries, applying the same data-driven strategies to achieve measurable growth.

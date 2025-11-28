@@ -50,9 +50,9 @@ export default function PaidService() {
   return (
     <section className="relative py-16 bg-white px-4 lg:px-8 xl:px-12 2xl:px-0">
       <div className="text-center mb-20 max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-4xl font-bold text-[#1a1b1e]">
+        <h1 className="text-4xl md:text-4xl font-bold text-[#1a1b1e]">
           Turn Ad Spend into Revenue
-        </h2>
+        </h1>
         <p className="text-base text-[#606060] text-justify md:text-center mt-4 max-w-5xl mx-auto px-4 md:px-0">
           {`Online advertising delivers the ability to drive immediate results when done systematically and approached scientifically.  The Webentryx approach to Pay Per Click  and Social Media advertising is built around crafting result oriented campaigns. We design these campaigns upon careful analysis of each brand’s USPs. By matching these USPs with the right audience and channels we build a foundation for cost effective online advertising campaigns`}
         </p>

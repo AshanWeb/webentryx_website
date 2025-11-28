@@ -50,9 +50,9 @@ export default function DigitalServices() {
   return (
     <section className="relative py-16 bg-white px-4 lg:px-8 xl:px-12 2xl:px-0">
       <div className="text-center mb-20 max-w-7xl mx-auto px-4 md:px-0">
-        <h2 className="text-4xl font-bold text-[#1a1b1e]">
+        <h1 className="text-4xl font-bold text-[#1a1b1e]">
           Clarity and Strategy for Scalable Growth
-        </h2>
+        </h1>
         <p className="text-base text-[#606060] mt-4 max-w-5xl mx-auto text-justify md:text-center px-4 md:px-0">
           {`At Webentryx, we take time to understand the core values of every brand we work with, then craft strategies that amplify them in the digital space. In a landscape shaped by AI and shifting customer behaviors, our consulting service merges brand insight with performance-driven strategy to strengthen awareness, protect equity, and drive measurable growth.
 `}

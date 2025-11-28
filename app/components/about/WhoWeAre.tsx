@@ -26,9 +26,9 @@ function WhoWeAre() {
                     <div className="w-2 h-2 bg-[#a5b7d2] rounded-full" />
                 </div>
 
-                <h2 className="text-2xl lg:text-3xl xl:text-4xl  font-bold text-[#1a1b1e] leading-snug mb-4 max-w-lg">
+                <h1 className="text-2xl lg:text-3xl xl:text-4xl  font-bold text-[#1a1b1e] leading-snug mb-4 max-w-lg">
                     {`Beyond Marketing – Driving Measurable Growth`}
-                </h2>
+                </h1>
 
                 <h3 className="text-lg md:text-xl font-medium text-[#1a1b1e] mb-4 max-w-md">
                     Empowering brands to stay visible, relevant, and profitable in a digital world reshaped by AI

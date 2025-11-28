@@ -64,9 +64,9 @@ export default function BlogGridWithSearch({ posts }: Props) {
               </div>
 
               <Link href={`/blog/${post.fields.slug}`}>
-                <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold text-[#1a1b1e] mb-2 hover:text-[#eb0029] cursor-pointer duration-300 line-clamp-2">
+                <h1 className="text-2xl sm:text-2xl md:text-3xl font-bold text-[#1a1b1e] mb-2 hover:text-[#eb0029] cursor-pointer duration-300 line-clamp-2">
                   {post.fields.title}
-                </h2>
+                </h1>
               </Link>
 
               <p className="text-[#606060] text-[15px] sm:text-[16px] line-clamp-3 leading-relaxed">
