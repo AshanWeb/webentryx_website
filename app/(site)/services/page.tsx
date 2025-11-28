@@ -4,6 +4,11 @@ import React from "react";
 
 export const metadata = {
   title: "Digital Services by Webentryx | Marketing, Analytics & Growth",
+  description:
+    "Explore Webentryx’s full range of digital services, including analytics, digital marketing, paid media & data-driven strategies designed to accelerate growth.",
+  alternates: {
+    canonical: "https://www.webentryx.com/services",
+  },
 };
 
 function page() {

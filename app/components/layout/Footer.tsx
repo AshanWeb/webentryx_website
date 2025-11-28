@@ -1,10 +1,4 @@
-import {
-  FacebookIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  Send,
-  X,
-} from "lucide-react";
+import { LinkedinIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -51,10 +45,21 @@ export default function Footer() {
         <div>
           <h4 className="footer-title mb-7">Services</h4>
           <ul className="footer-link space-y-3 text-white/80">
-            <li>Digital Marketing Consulting</li>
-            <li>Search Engine Optimization</li>
-            <li>Online advertising</li>
-            <li>Analytics</li>
+            <Link href="/services/digital-marketing">
+              <li>Digital Marketing Consulting</li>
+            </Link>
+
+            <Link href="/services/services-detail">
+              <li>Search Engine Optimization</li>
+            </Link>
+
+            <Link href="/services/paid-media">
+              <li>Online advertising</li>
+            </Link>
+
+            <Link href="/services/analytics">
+              <li>Analytics</li>
+            </Link>
           </ul>
         </div>
 

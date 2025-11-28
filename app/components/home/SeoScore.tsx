@@ -55,7 +55,7 @@ export default function SeoScore() {
           />
 
           <div>
-            <MainButton text="Explore" href="contact"/>
+            <MainButton text="Explore" href="/contact"/>
           </div>
         </div>
       </div>

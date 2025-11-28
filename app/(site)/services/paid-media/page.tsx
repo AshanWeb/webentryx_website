@@ -7,6 +7,11 @@ import React from "react";
 
 export const metadata = {
   title: "Paid Media by Webentryx | PPC, Display & Performance Ads",
+  description:
+    "Discover Webentryx’s paid media services, including PPC, display & performance campaigns designed to maximize ROI and accelerate business growth.",
+  alternates: {
+    canonical: "https://www.webentryx.com/services/paid-media",
+  },
 };
 function page() {
   return (

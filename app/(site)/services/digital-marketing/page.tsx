@@ -7,6 +7,11 @@ import React from "react";
 
 export const metadata = {
   title: "Digital Marketing Services | SEO & Growth Strategies | Webentryx",
+  description:
+    "Grow your brand with Webentryx’s digital marketing services, including SEO, content, social media & data-driven strategies tailored for long-term success.",
+  alternates: {
+    canonical: "https://www.webentryx.com/services/digital-marketing",
+  },
 };
 function page() {
   return (

@@ -7,6 +7,11 @@ import React from "react";
 
 export const metadata = {
   title: "About Webentryx | Our Vision, Team & Digital Expertise",
+  description:
+    "Learn about Webentryx, our mission, expertise, and how our digital strategy & marketing solutions help businesses grow in a competitive digital landscape.",
+  alternates: {
+    canonical: "https://www.webentryx.com/about ",
+  },
 };
 
 function page() {

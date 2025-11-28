@@ -19,16 +19,26 @@ type BlogPageProps = {
   params: Promise<BlogPageParams>;
 };
 
-export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: BlogPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post: BlogPost | undefined = await getBlogPost(slug);
 
   if (!post || !post.fields.titleTag) {
-    return { title: "Webentryx Blog | Insights on Digital Marketing & Analytics" };
+    return {
+      title: "Webentryx Blog | Insights on Digital Marketing & Analytics",
+      alternates: {
+        canonical: "https://www.webentryx.com/blog",
+      },
+    };
   }
 
   return {
     title: post.fields.titleTag,
+    alternates: {
+      canonical: `https://www.webentryx.com/blog/${slug}`,
+    },
     openGraph: {
       title: post.fields.titleTag,
       description: post.fields.description || "",

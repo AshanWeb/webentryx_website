@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Red_Hat_Display, Red_Hat_Text} from "next/font/google";
+import { Red_Hat_Display, Red_Hat_Text } from "next/font/google";
 import "../globals.css";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
@@ -7,8 +7,8 @@ import { Toaster } from "react-hot-toast";
 
 const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"], 
-  variable: "--font-red-hat-display", 
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-red-hat-display",
 });
 
 const redHatText = Red_Hat_Text({
@@ -29,6 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="canonical" href="https://www.webentryx.com/" />
+      </head>
       <body
         className={`${redHatDisplay.variable} ${redHatText.variable} antialiased`}
       >

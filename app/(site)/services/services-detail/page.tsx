@@ -7,6 +7,11 @@ import React from "react";
 
 export const metadata = {
   title: "Webentryx Services | Digital Solutions for Business Growth",
+  description:
+    "Webentryx offers customized digital solutions designed to improve performance, strengthen online visibility, and support long-term business growth.",
+  alternates: {
+    canonical: "https://www.webentryx.com/services/services-detail",
+  },
 };
 
 function page() {

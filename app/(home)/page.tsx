@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+   other: {
+    'google-site-verification': 'uhPQ1JOfk0Ihsmae78MFAL9HSnvO_8IX0a7dhQ7mdls',
+  },
 };
 
 export default function Home() {
