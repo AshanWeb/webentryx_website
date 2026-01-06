@@ -41,7 +41,7 @@ export default function BlogGridWithSearch({ posts }: Props) {
             {post.fields.image && (
               <Link href={`/blog/${post.fields.slug}`}>
                 <Image
-                  src={`https:${post.fields.image.fields.file.url}`}
+                  src={`https:${post?.fields?.image?.fields?.file.url}`}
                   alt={post.fields.title}
                   width={750}
                   height={500}
