@@ -2,6 +2,9 @@ import { getBlogPosts } from "@/lib/contentful";
 import BlogGridWithSearch from "@/app/components/blog/BlogGridWithSearch";
 import BlogHero from "@/app/components/reusable/BlogHero";
 
+
+export const revalidate = 60;
+
 export const metadata = {
   title: "Webentryx Blog | Insights on Digital Marketing & Analytics",
   description:

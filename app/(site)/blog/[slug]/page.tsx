@@ -4,6 +4,10 @@ import RichTextRender from "@/app/components/reusable/RichTextRender";
 import Image from "next/image";
 import type { Metadata } from "next";
 
+
+
+export const revalidate = 60;
+
 /** Type for generateStaticParams return value */
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
