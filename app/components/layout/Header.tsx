@@ -71,6 +71,23 @@ export default function Header() {
               alt="Webentry"
               width={112}
               height={28}
+              className="h-5 w-auto hidden md:block"
+              priority
+            />
+            <Image
+              src={scrolled ? "/images/logo.png" : "/images/logo-white.png"}
+              alt="Webentry"
+              width={112}
+              height={28}
+              className="h-5 w-auto md:hidden"
+              priority
+            />
+
+            {/* <Image
+              src={scrolled ? "/images/logo.png" : "/images/logo-white.png"}
+              alt="Webentry"
+              width={112}
+              height={28}
               className="w-full h-5 hidden md:block"
             />
             <Image
@@ -79,7 +96,7 @@ export default function Header() {
               width={112}
               height={28}
               className="w-full h-5 md:hidden"
-            />
+            /> */}
           </Link>
 
           {/* Desktop Nav */}
