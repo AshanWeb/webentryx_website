@@ -88,9 +88,7 @@ export default function Footer() {
           <h4 className="footer-title mb-7">Contacts</h4>
           <ul className="footer-link space-y-3 ">
             <li>
-              Address: 10A Philip Gunawardena Mawatha,
-              <br />
-              Colombo 7
+              Address: 10A Philip Gunawardena Mawatha, Colombo 7
             </li>
 
             <li>Email: enquiries@webentryx.com</li>
