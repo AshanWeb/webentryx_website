@@ -17,7 +17,7 @@ const logos = [
   "/images/client-08.png",
   "/images/client-09.png",
   "/images/client-010.png",
-  "/images/client-012.png",
+  "/images/client-013.png",
 ];
 
 export default function LogoSlider() {
