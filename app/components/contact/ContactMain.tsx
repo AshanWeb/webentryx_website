@@ -91,7 +91,7 @@ function ContactMain() {
                     Our Address:
                   </p>
                   <p className="text-lg md:text-xl font-semibold">
-                    {`47/3, St Rita's Road, Mount Lavinia`}
+                    {`10A Philip Gunawardena Mawatha, Colombo 7`}
                   </p>
                 </div>
               </div>
